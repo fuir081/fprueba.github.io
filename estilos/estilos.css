@@ -1,0 +1,218 @@
+/********** IMPORTACIONES ***************/
+
+@import url(reset.css);
+
+:root{
+    --c-negro:#0b0b0b;
+    --c-blanco: #f1f1f1;
+    --c-azul:#0c2442;
+    --c-mora:#ba6bff;
+}
+
+
+html{
+	scroll-behavior: smooth;
+}
+
+/************ header ***************/
+
+header{
+    background: black;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ header article{
+    width: clamp(300px, 40%, 700px);
+    height: 40%;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+
+ nav{
+    width: 80%;
+    padding: 20px 10%;
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    z-index: 200;
+}
+
+ nav .btn-menu{
+    width: 50px;
+    height: auto;
+    position: relative;
+    margin-top: 30px;
+    cursor: pointer;
+    z-index: 250;
+}
+
+
+
+ nav .btn-menu div{
+    width: 100%;
+    height: 2px;
+    background-color: var(--c-blanco);
+    transition: all ease .5s;
+    z-index: 2500;
+    position: relative;
+}
+
+ nav .btn-menu div:nth-child(2){
+    width: 100%;
+    height: 2px;
+    background-color: var(--c-blanco);
+    margin-top: 11px;
+    position: absolute;
+    left: -10px;
+
+}
+
+ nav .btn-menu div:last-child{
+    width: 100%;
+    height: 2px;
+    background-color: var(--c-blanco);
+    margin-top: 22px;
+    position: absolute;
+}
+
+
+
+ nav .btn-menu div:first-child.e-btn__first{
+    transform: rotate(40deg);
+}
+
+ nav .btn-menu div:nth-child(2).e-btn__second{
+    transform: rotate(136deg);
+    left: -1px;
+    margin-top: -1px;
+}
+
+ nav .btn-menu div:last-child.e-btn__last{
+    display: none;
+}
+
+ nav>.menu{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #8df4ff;
+    display: block;
+    top: 0;
+    left: -2000px;
+    transition: all ease .5s;
+
+    
+}
+
+ nav>.menu .m-menu{
+    width: 40vw;
+    height: 100vh;
+    background-color: var(--c-negro);
+    position: fixed;
+    transition: all ease .10s;
+    top: 0;
+    left: -2400px;
+    transition: all ease .7s;
+}
+
+
+ nav>.e_menu,  nav > .menu .e-m_menu{
+    left: 0;
+}
+
+
+ nav .logo{
+    margin-top: 30px;
+}
+
+ nav .logo a{
+    font-family: "confoB";
+    font-family: 1.8em;
+    color: var(--c-blanco);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+}
+
+ nav > .btn-contacto{
+    margin-top: 20px;
+    padding: 5px 20px;
+    border-radius: 25px;
+    background-color: var(--c-blanco);
+    text-align: center;
+    font-family: "montseM";
+    color: var(--c-azul);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 0.8em;
+    cursor: pointer;
+    box-shadow: 1px 3px 0px 0px #8df4ff;;
+
+}
+
+
+
+header .btn-bajar{
+	width: 100px;
+	height: 85px;
+	position: absolute;
+    bottom: 0;
+}
+
+header .btn-bajar a{
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+}
+
+header .btn-bajar a img:first-child{
+	width: 50px;
+	height: 30px;
+	position: absolute;
+	transition: all ease .5s;
+	animation: e-tri 1s 0.7s linear infinite;
+	animation-delay: .6s;
+
+
+}
+header .btn-bajar a img:last-child{
+	width: 80px;
+	height: 55px;
+	position: absolute;
+	margin-top: 10px;
+	transition: all ease .5s;
+	animation: e-tri 1s 0.7s linear infinite;
+	animation-delay: .10s;
+}
+
+@keyframes e-tri {
+	0%,
+	50%,
+	100%{
+		margin-top: 8px;
+	}25%{
+		margin-top: 5px;
+	}50%{
+		margin-top: 3px;
+	}75%{
+		margin-top: 5pxs;
+	}
+}
+
+
+
+/************** MAIN **************/
+
+main{
+    width: 100%;
+    height: 800px;
+    background-color: black;
+}
